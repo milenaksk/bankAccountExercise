@@ -25,7 +25,7 @@ public class SavingsAccount extends Account{
     }
 
     @Override
-    public void withdraw(double amount) {
+    public void withdraw(double amount) {  //Se a conta for do tipo poupança, não irá descontar 5.0 no saque como na conta normal (withdraw)
         balance = balance - amount;
     }
 }
