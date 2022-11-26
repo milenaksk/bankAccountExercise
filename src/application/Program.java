@@ -15,4 +15,10 @@ public class Program {
         Account acc2 = new BusinessAccount(1003, "Bob", 0.0, 200.0);
         Account acc3 = new SavingsAccount(1004, "Leona", 0.0, 0.01);
     }
+
+    // DOWNCASTING
+
+        BusinessAccount acc4 = (BusinessAccount) acc2;
+        acc4.loan(100.0);
+        
 }
