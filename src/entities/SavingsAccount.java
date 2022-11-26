@@ -12,6 +12,11 @@ public class SavingsAccount extends Account{
         this.interestRate = interestRate;
     }
 
+    @Override
+    public void withdraw(double amount) {  //Se a conta for do tipo poupança, não irá descontar 5.0 no saque como na conta normal (withdraw)
+        balance = balance - amount;
+    }
+
     public double getInterestRate() {
         return interestRate;
     }
@@ -24,8 +29,4 @@ public class SavingsAccount extends Account{
         balance  = balance * interestRate; //taxa de juros
     }
 
-    @Override
-    public void withdraw(double amount) {  //Se a conta for do tipo poupança, não irá descontar 5.0 no saque como na conta normal (withdraw)
-        balance = balance - amount;
-    }
 }

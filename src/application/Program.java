@@ -1,6 +1,7 @@
 package application;
 
 import entities.Account;
+import entities.SavingsAccount;
 
 public class Program {
     public static void main(String[] args) {
@@ -8,7 +9,9 @@ public class Program {
         acc1.withdraw(200.0);
         System.out.println(acc1.getBalance());
 
-        
+        Account acc2 = new SavingsAccount(1002, "Micah", 1000.0, 0.01);
+        acc2.withdraw(200);
+        System.out.println(acc2.getBalance());
 
     }
 }
