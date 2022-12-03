@@ -1,6 +1,6 @@
 package entities;
 
-public final class SavingsAccount extends Account{
+public class SavingsAccount extends Account{
     private double interestRate;
 
     public SavingsAccount() { //construtor padrão
@@ -13,7 +13,7 @@ public final class SavingsAccount extends Account{
     }
 
     @Override
-    public void withdraw(double amount) {  //Se a conta for do tipo poupança, não irá descontar 5.0 no saque como na conta normal
+    public final void withdraw(double amount) {  //Se a conta for do tipo poupança, não irá descontar 5.0 no saque como na conta normal
         balance = balance - amount;
     }
 
